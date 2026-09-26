@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyFlow AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="bento-grid">
+
+        <!-- CREATE STUDY PLAN -->
+        <section class="card cream create-card">
+
+            <div>
+                <h2>
+                    Create and<br>
+                    organize your<br>
+                    <span>study plan.</span>
+                </h2>
+
+                <button class="pill-btn" onclick="showMessage('New study plan created ✦')">
+                    Create Plan <span>✦</span>
+                </button>
+            </div>
+
+            <div class="cursor-arrow">↗</div>
+
+        </section>
+
+
+        <!-- AI NOTES -->
+        <section class="card yellow ai-card">
+
+            <h2>
+                Write your<br>
+                notes using AI.
+            </h2>
+
+            <div class="chat-window">
+
+                <div class="chat-user">
+
+                    <div class="avatar">
+                        👩🏻‍💻
+                    </div>
+
+                    <div class="bubble user-bubble">
+                        Explain machine learning in 5 simple points.
+                    </div>
+
+                </div>
+
+
+                <div class="chat-ai">
+
+                    <div class="sparkle">
+                        ✦
+                    </div>
+
+                    <div class="bubble ai-bubble">
+                        Sure! Here are five easy points to help you
+                        understand it...
+                    </div>
+
+                </div>
+
+                <button
+                    class="send-btn"
+                    onclick="showMessage('AI assistant is ready ✨')">
+                    ↑
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAIN HERO -->
+        <section class="card purple hero-card">
+
+            <p class="eyebrow">
+                STUDYFLOW AI
+            </p>
+
+            <h1>
+                Study <span>10x</span><br>
+                <em>Smarter with AI</em>
+            </h1>
+
+            <div class="stars">
+                ★ ★ ★ ★ ★
+            </div>
+
+            <p class="review-text">
+                Built for focused students who want to learn faster.
+            </p>
+
+        </section>
+
+
+        <!-- SUBJECTS -->
+        <section class="card white accounts-card">
+
+            <div class="subject-row">
+
+                <div class="subject-chip">
+                    <span class="icon purple-bg">📘</span>
+                    Python
+                </div>
+
+                <div class="subject-chip">
+                    <span class="icon yellow-bg">⚡</span>
+                    Networks
+                </div>
+
+            </div>
+
+            <h2>
+                Manage multiple<br>
+                subjects and<br>
+                projects.
+            </h2>
+
+        </section>
+
+
+        <!-- STUDY SCHEDULE -->
+        <section class="card yellow schedule-card">
+
+            <h2>
+                Maintain a<br>
+                consistent<br>
+                study routine.
+            </h2>
+
+            <div class="calendar">
+
+                <div class="calendar-head">
+                    <span>September 2026</span>
+                    <span>Week 4</span>
+                </div>
+
+                <div class="calendar-days">
+
+                    <span>✓</span>
+                    <span>✓</span>
+                    <span>✓</span>
+                    <span>✓</span>
+                    <span>✓</span>
+
+                </div>
+
+                <div class="calendar-labels">
+
+                    <small>Mon</small>
+                    <small>Tue</small>
+                    <small>Wed</small>
+                    <small>Thu</small>
+                    <small>Fri</small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BEST STUDY TIME -->
+        <section class="card lavender timing-card">
+
+            <h2>
+                Find your best<br>
+                study time.
+            </h2>
+
+
+            <div class="chart-box">
+
+                <p class="chart-title">
+                    Most Productive Hours
+                </p>
+
+
+                <div class="chart-tabs">
+
+                    <span class="active">Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+
+                </div>
+
+
+                <div class="bars">
+
+                    <div class="bar-wrap">
+
+                        <div class="bar b1"></div>
+
+                        <small>6a</small>
+
+                    </div>
+
+
+                    <div class="bar-wrap">
+
+                        <div class="bar b2"></div>
+
+                        <small>9a</small>
+
+                    </div>
+
+
+                    <div class="bar-wrap">
+
+                        <div class="bar b3"></div>
+
+                        <small>12p</small>
+
+                    </div>
+
+
+                    <div class="bar-wrap">
+
+                        <div class="bar b4"></div>
+
+                        <small>3p</small>
+
+                    </div>
+
+
+                    <div class="bar-wrap">
+
+                        <div class="bar b5"></div>
+
+                        <small>6p</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p class="muted">
+                Plan difficult subjects during the hours
+                when your focus is highest.
+            </p>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="card white growth-stat">
+
+            <div class="big-stat">
+                +48%
+            </div>
+
+            <p>
+                faster revision<br>
+                with structured study
+            </p>
+
+
+            <div class="student-avatars">
+
+                <span>👩🏻</span>
+                <span>🧑🏽‍💻</span>
+                <span>👨🏻‍🎓</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+        <section class="card purple growth-card">
+
+            <div class="progress-widget">
+
+                <div class="widget-title">
+                    Learning Progress
+                </div>
+
+                <div class="progress-number">
+                    82%
+                </div>
+
+                <div class="progress-track">
+
+                    <div class="progress-fill"></div>
+
+                </div>
+
+                <div class="progress-meta">
+
+                    <span>Completed</span>
+
+                    <span>
+                        24 / 30 tasks
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Build skills<br>
+                    with consistent<br>
+                    learning.
+                </h2>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div id="toast" class="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
