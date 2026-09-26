@@ -1,0 +1,1197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --purple: #7550dc;
+
+    --purple-dark: #6040bd;
+
+    --lavender: #ddd2ff;
+
+    --yellow: #ffd36f;
+
+    --cream: #fff1e1;
+
+    --white: #ffffff;
+
+    --text: #111111;
+
+    --muted: #77727d;
+
+    --page: #f7f7f7;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    padding: 58px;
+
+    background: var(--page);
+
+    color: var(--text);
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* MAIN GRID */
+
+.bento-grid {
+
+    width: min(1280px, 100%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1.55fr
+        1fr;
+
+    grid-template-rows:
+        325px
+        248px
+        246px;
+
+    gap: 28px;
+}
+
+
+/* GENERAL CARD */
+
+.card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    padding: 28px;
+}
+
+
+.card h1,
+.card h2,
+.card p {
+
+    letter-spacing: -1.7px;
+}
+
+
+.card h2 {
+
+    font-size: clamp(
+        25px,
+        2.25vw,
+        34px
+    );
+
+    line-height: .98;
+
+    font-weight: 650;
+}
+
+
+/* COLORS */
+
+.cream {
+
+    background: var(--cream);
+}
+
+
+.yellow {
+
+    background: var(--yellow);
+}
+
+
+.purple {
+
+    background: var(--purple);
+
+    color: white;
+}
+
+
+.white {
+
+    background: white;
+}
+
+
+.lavender {
+
+    background: var(--lavender);
+}
+
+
+/* GRID POSITIONS */
+
+.create-card {
+
+    grid-column: 1;
+
+    grid-row: 1;
+}
+
+
+.ai-card {
+
+    grid-column: 1;
+
+    grid-row: 2 / 4;
+}
+
+
+.hero-card {
+
+    grid-column: 2;
+
+    grid-row: 1;
+}
+
+
+.accounts-card {
+
+    grid-column: 2;
+
+    grid-row: 2;
+}
+
+
+.schedule-card {
+
+    grid-column: 2;
+
+    grid-row: 3;
+}
+
+
+.timing-card {
+
+    grid-column: 3;
+
+    grid-row: 1 / 3;
+}
+
+
+.growth-stat {
+
+    grid-column: 3;
+
+    grid-row: 3;
+}
+
+
+.growth-card {
+
+    grid-column: 2 / 4;
+
+    grid-row: 4;
+}
+
+
+/* HERO */
+
+.hero-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.eyebrow {
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px !important;
+
+    opacity: .8;
+
+    margin-bottom: 17px;
+}
+
+
+.hero-card h1 {
+
+    font-size: clamp(
+        44px,
+        5vw,
+        66px
+    );
+
+    line-height: .92;
+
+    letter-spacing: -4px;
+
+    font-weight: 650;
+}
+
+
+.hero-card h1 span {
+
+    color: var(--yellow);
+}
+
+
+.hero-card h1 em {
+
+    font-style: italic;
+
+    font-weight: 450;
+}
+
+
+.stars {
+
+    margin-top: 26px;
+
+    color: var(--yellow);
+
+    font-size: 23px;
+
+    letter-spacing: 8px;
+}
+
+
+.review-text {
+
+    margin-top: 9px;
+
+    font-size: 16px;
+
+    letter-spacing: -.5px !important;
+
+    opacity: .9;
+}
+
+
+/* CREATE PLAN */
+
+.create-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-left: 34px;
+}
+
+
+.create-card h2 span {
+
+    color: var(--purple);
+
+    font-style: italic;
+}
+
+
+.pill-btn {
+
+    border: 0;
+
+    margin-top: 30px;
+
+    padding: 15px 25px;
+
+    border-radius: 40px;
+
+    background: var(--yellow);
+
+    color: var(--purple);
+
+    font-weight: 800;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s,
+        box-shadow .2s;
+}
+
+
+.pill-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,.12);
+}
+
+
+.pill-btn span {
+
+    margin-left: 8px;
+}
+
+
+.cursor-arrow {
+
+    position: absolute;
+
+    right: 75px;
+
+    bottom: 78px;
+
+    font-size: 38px;
+
+    transform: rotate(-20deg);
+}
+
+
+/* AI SECTION */
+
+.ai-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.chat-window {
+
+    position: relative;
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 17px;
+
+    margin-top: 25px;
+
+    min-height: 205px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,.06);
+}
+
+
+.chat-user,
+.chat-ai {
+
+    display: flex;
+
+    gap: 9px;
+
+    align-items: flex-start;
+}
+
+
+.chat-ai {
+
+    margin-top: 15px;
+}
+
+
+.avatar,
+.sparkle {
+
+    width: 38px;
+
+    height: 38px;
+
+    min-width: 38px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #f8e5eb;
+}
+
+
+.sparkle {
+
+    background: var(--lavender);
+
+    color: var(--purple);
+
+    font-size: 19px;
+}
+
+
+.bubble {
+
+    padding: 11px 13px;
+
+    border-radius: 14px;
+
+    font-size: 13px;
+
+    line-height: 1.3;
+
+    letter-spacing: -.2px;
+}
+
+
+.user-bubble {
+
+    background: #fff0f2;
+}
+
+
+.ai-bubble {
+
+    background: #fff2d8;
+
+    margin-right: 22px;
+}
+
+
+.send-btn {
+
+    position: absolute;
+
+    right: 13px;
+
+    bottom: 13px;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: 5px solid white;
+
+    border-radius: 50%;
+
+    background: var(--yellow);
+
+    color: var(--purple);
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* SUBJECTS */
+
+.accounts-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.subject-row {
+
+    display: flex;
+
+    gap: 10px;
+
+    overflow: hidden;
+}
+
+
+.subject-chip {
+
+    background: #fafafa;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,.08);
+
+    border-radius: 35px;
+
+    padding: 9px 16px 9px 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    white-space: nowrap;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+
+.icon {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+}
+
+
+.purple-bg {
+
+    background: var(--lavender);
+}
+
+
+.yellow-bg {
+
+    background: #ffe19b;
+}
+
+
+.accounts-card h2 {
+
+    font-size: 29px;
+
+    margin-top: 20px;
+}
+
+
+/* SCHEDULE */
+
+.schedule-card {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 18px;
+}
+
+
+.calendar {
+
+    align-self: flex-end;
+
+    width: 56%;
+
+    min-width: 245px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0,0,0,.07);
+}
+
+
+.calendar-head {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    background: var(--purple);
+
+    color: white;
+
+    padding: 11px 14px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.calendar-days,
+.calendar-labels {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+}
+
+
+.calendar-days {
+
+    padding: 14px 8px 7px;
+}
+
+
+.calendar-days span {
+
+    width: 25px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    color: white;
+
+    background: var(--purple);
+
+    font-size: 12px;
+}
+
+
+.calendar-labels {
+
+    padding-bottom: 11px;
+
+    color: #999;
+}
+
+
+/* STUDY TIME */
+
+.timing-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.chart-box {
+
+    background: white;
+
+    border-radius: 17px;
+
+    padding: 18px 20px 12px;
+
+    margin: 25px 0 18px;
+}
+
+
+.chart-title {
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: -.4px !important;
+}
+
+
+.chart-tabs {
+
+    display: flex;
+
+    gap: 17px;
+
+    margin: 14px 0 10px;
+
+    font-size: 12px;
+
+    color: #999;
+}
+
+
+.chart-tabs .active {
+
+    color: #e66c78;
+
+    background: #ffe4e8;
+
+    padding: 5px 10px;
+
+    border-radius: 14px;
+
+    margin-top: -5px;
+}
+
+
+.bars {
+
+    height: 155px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: flex-end;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.bar-wrap {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.bar {
+
+    width: 23px;
+
+    border-radius:
+        15px
+        15px
+        5px
+        5px;
+
+    background: var(--purple);
+}
+
+
+.b1 {
+    height: 50px;
+}
+
+.b2 {
+    height: 85px;
+}
+
+.b3 {
+    height: 125px;
+}
+
+.b4 {
+    height: 98px;
+}
+
+.b5 {
+    height: 68px;
+}
+
+
+.bar-wrap small {
+
+    color: #aaa;
+
+    padding-bottom: 7px;
+}
+
+
+.muted {
+
+    font-size: 16px;
+
+    line-height: 1.15;
+
+    letter-spacing: -.6px !important;
+}
+
+
+/* STATISTICS */
+
+.growth-stat {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.big-stat {
+
+    font-size: clamp(
+        43px,
+        4vw,
+        58px
+    );
+
+    font-weight: 500;
+
+    letter-spacing: -4px;
+}
+
+
+.growth-stat p {
+
+    font-size: 17px;
+
+    line-height: 1.1;
+
+    margin-top: 5px;
+
+    letter-spacing: -.6px !important;
+}
+
+
+.student-avatars {
+
+    display: flex;
+
+    margin-top: 18px;
+}
+
+
+.student-avatars span {
+
+    width: 43px;
+
+    height: 43px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--lavender);
+
+    border: 3px solid white;
+
+    margin-left: -7px;
+
+    font-size: 21px;
+}
+
+
+.student-avatars span:first-child {
+
+    margin-left: 0;
+}
+
+
+/* PROGRESS */
+
+.growth-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.growth-card h2 {
+
+    font-size: clamp(
+        29px,
+        3vw,
+        40px
+    );
+}
+
+
+.progress-widget {
+
+    width: 44%;
+
+    min-width: 260px;
+
+    background: white;
+
+    color: #222;
+
+    border-radius: 16px;
+
+    padding: 18px 20px;
+}
+
+
+.widget-title {
+
+    color: #aaa;
+
+    font-size: 12px;
+}
+
+
+.progress-number {
+
+    font-size: 31px;
+
+    font-weight: 700;
+
+    margin: 4px 0 12px;
+}
+
+
+.progress-track {
+
+    height: 10px;
+
+    background: #eee;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.progress-fill {
+
+    width: 82%;
+
+    height: 100%;
+
+    background: var(--purple);
+
+    border-radius: 20px;
+}
+
+
+.progress-meta {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 8px;
+
+    font-size: 11px;
+
+    color: #999;
+}
+
+
+/* TOAST */
+
+.toast {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 28px;
+
+    transform:
+        translate(-50%, 90px);
+
+    background: #111;
+
+    color: white;
+
+    padding: 13px 20px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    opacity: 0;
+
+    transition: .3s ease;
+
+    z-index: 20;
+}
+
+
+.toast.show {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, 0);
+}
+
+
+/* ANIMATION */
+
+.card-enter {
+
+    animation:
+        cardEnter
+        .65s
+        ease
+        both;
+}
+
+
+@keyframes cardEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+
+    body {
+
+        padding: 25px;
+    }
+
+
+    .bento-grid {
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        grid-template-rows:
+            auto;
+    }
+
+
+    .create-card,
+    .ai-card,
+    .hero-card,
+    .accounts-card,
+    .schedule-card,
+    .timing-card,
+    .growth-stat,
+    .growth-card {
+
+        grid-column: auto;
+
+        grid-row: auto;
+
+        min-height: 270px;
+    }
+
+
+    .hero-card {
+
+        min-height: 340px;
+    }
+
+
+    .timing-card {
+
+        min-height: 500px;
+    }
+
+
+    .growth-card {
+
+        grid-column: 1 / 3;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    body {
+
+        padding: 14px;
+    }
+
+
+    .bento-grid {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .card {
+
+        min-height: auto !important;
+    }
+
+
+    .hero-card {
+
+        min-height: 330px !important;
+    }
+
+
+    .create-card,
+    .ai-card,
+    .accounts-card,
+    .schedule-card,
+    .timing-card,
+    .growth-stat,
+    .growth-card {
+
+        min-height: 300px !important;
+    }
+
+
+    .schedule-card,
+    .growth-card {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .calendar,
+    .progress-widget {
+
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    .growth-card {
+
+        justify-content: center;
+    }
+
+
+    .hero-card h1 {
+
+        letter-spacing: -3px;
+    }
+}
